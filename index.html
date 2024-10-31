@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <script src="weather.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="weatherstyle.css">
+</head>
+
+<body>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1>WELCOME</h1>
+                <p></p>
+                <br><br>
+                <i class="fas fa-cloud-sun fa-10x"></i>
+            </div>
+            <div class="flip-card-back">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <hr>
+                        <div class="search-bar">
+                            <input type="search" id="cityInput" placeholder="Enter a city name">
+                            <button id="searchButton" onclick="myfunc()">Search <i class="fas fa-search"></i></button>
+                        </div>
+                        <h1>Today's Weather Report:</h1>
+                        <div class="weather-info">
+                            <div class="weather-detail">
+                                <i class="fas fa-thermometer-half"></i>
+                                <span>TEMP: </span>
+                                <span id="temp"></span>
+                            </div>
+                            <div class="weather-detail">
+                                <i class="fas fa-tint"></i>
+                                <span>HUMIDITY: </span>
+                                <span id="humidity"></span>
+                            </div>
+                            <div class="weather-detail">
+                                <i class="fas fa-thermometer-three-quarters"></i>
+                                <span>TEMP_MAX: </span>
+                                <span id="tempMax"></span>
+                            </div>
+                            <div class="weather-detail">
+                                <i class="fas fa-thermometer-quarter"></i>
+                                <span>TEMP_MIN: </span>
+                                <span id="tempMin"></span>
+                            </div>
+                            <div class="weather-detail">
+                                <i class="fas fa-cloud"></i>
+                                <span>IMG: </span>
+                                <img id="weatherIcon" alt="Weather Icon" />
+                            </div>
+                        </div>
+                        <hr><br><br>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

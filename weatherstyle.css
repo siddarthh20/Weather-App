@@ -1,0 +1,150 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1503327431567-3ab5e6e79140?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blanchedalmond;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.flip-card {
+    width: 300px;
+    height: 400px;
+    margin: 2rem auto;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.flip-card-front {
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    background-color: rgb(14, 13, 1);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    width: 100%;
+}
+
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 10px;
+    outline: none;
+}
+
+input[type="search"]:focus {
+    border-color: #666;
+}
+
+button#searchButton {
+    padding: 10px 20px;
+    background-image: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button#searchButton i {
+    margin-left: 8px;
+}
+
+button#searchButton:hover {
+    background-image: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.05);
+}
+
+button#searchButton:focus {
+    outline: none;
+    box-shadow: 0 0 5px #28a745;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.weather-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.weather-detail span {
+    margin-left: 10px;
+}
+
+.weather-detail i {
+    margin-right: 10px;
+}
+
+img#weatherIcon {
+    width: 50px;
+    height: 50px;
+}
